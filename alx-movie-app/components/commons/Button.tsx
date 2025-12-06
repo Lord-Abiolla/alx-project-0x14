@@ -1,8 +1,10 @@
-import React from "react";
+import { ButtonProps } from "../../interfaces";
 
-function Button() {
+const Button: React.FC<ButtonProps> = ({ title, action }) => {
     return (
-        <h1>Button here</h1>
+        <button onClick={action} className="px-8 py-2 border-2 border-[#E2D609] rounded-full hover:bg-[#E2D609] hover:text-black transition-colors duration-300">
+            {title}
+        </button>
     )
 }
 
